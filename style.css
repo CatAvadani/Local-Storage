@@ -3,6 +3,8 @@ body {
 }
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: lightblue;
   padding: 0 1rem;
 }
@@ -25,4 +27,12 @@ footer {
 }
 .card-title {
   margin: 0;
+}
+.card-count-badge {
+  background-color: lightgoldenrodyellow;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
 }

@@ -1,5 +1,7 @@
 window.addEventListener("DOMContentLoaded", main);
 
+const cart = [];
+
 function main() {
   renderProducts();
 }
@@ -32,6 +34,10 @@ function createProductCard(product) {
   const addToCartButton = document.createElement("button");
   addToCartButton.className = "card-add-button";
   addToCartButton.textContent = "Buy";
+  addToCartButton.onclick = function () {
+    cart.push(product);
+    renderCardCountBadge();
+  };
 
   card.append(titleH2);
   card.append(priceLabel);
@@ -39,4 +45,9 @@ function createProductCard(product) {
 
   // return the card we created
   return card;
+}
+
+function renderCardCountBadge() {
+  const span = document.getElementById("cart-count");
+  span.textContent = cart.length;
 }
