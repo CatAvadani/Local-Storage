@@ -26,7 +26,7 @@ function createProductCard(product) {
   //create card price
   const priceLabel = document.createElement("p");
   priceLabel.classList.add("card-price");
-  priceLabel.textContent = product.price;
+  priceLabel.textContent = product.price + " kr";
 
   // create a button
   const addToCartButton = document.createElement("button");

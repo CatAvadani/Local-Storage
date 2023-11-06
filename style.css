@@ -7,11 +7,22 @@ header {
   padding: 0 1rem;
 }
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: lightcoral;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 footer {
   display: flex;
   background-color: lemonchiffon;
   padding: 0 1rem;
+}
+.product-card {
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.card-title {
+  margin: 0;
 }
