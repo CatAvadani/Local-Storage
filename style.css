@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  background-color: lightblue;
+  padding: 0 1rem;
+}
+main {
+  background-color: lightcoral;
+  padding: 0 1rem;
+}
+footer {
+  display: flex;
+  background-color: lemonchiffon;
+  padding: 0 1rem;
+}
