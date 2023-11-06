@@ -1,3 +1,12 @@
+/**
+ * @type {{id: number, title: string, price: number }} Product
+ */
+
+/**
+ * A list of mocked products to use before we fetch it from our
+ * DB.
+ * @type {Product[]}
+ */
 const products = [
   {
     id: 1,
