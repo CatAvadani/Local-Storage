@@ -1,9 +1,12 @@
 window.addEventListener("DOMContentLoaded", main);
 
-const cart = [];
+let cart = [];
 
 function main() {
+  // load the cart products from the Local Storage
+  loadCartFromLS();
   renderProducts();
+  renderCartCountBadge();
 }
 
 function renderProducts() {
@@ -30,12 +33,15 @@ function createProductCard(product) {
   priceLabel.classList.add("card-price");
   priceLabel.textContent = product.price + " kr";
 
-  // create a button
+  // create a button -- this is the function we need to save it to the local storage
   const addToCartButton = document.createElement("button");
   addToCartButton.className = "card-add-button";
   addToCartButton.textContent = "Buy";
   addToCartButton.onclick = function () {
     cart.push(product);
+
+    // save to the Local Storage
+    saveCardToLS();
     renderCardCountBadge();
   };
 
@@ -47,7 +53,18 @@ function createProductCard(product) {
   return card;
 }
 
-function renderCardCountBadge() {
+// create function to save the cart to the Local Storage
+function saveCardToLS() {
+  const cartString = JSON.stringify(cart);
+  localStorage.setItem("cart", cartString);
+}
+
+function loadCartFromLS() {
+  const cartString = localStorage.getItem("cart");
+  cart = JSON.parse(cartString);
+}
+
+function renderCartCountBadge() {
   const span = document.getElementById("cart-count");
   span.textContent = cart.length;
 }
