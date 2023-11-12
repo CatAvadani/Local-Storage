@@ -15,7 +15,7 @@ const products = [
   },
   {
     id: 2,
-    title: "Götebors Rape",
+    title: "Göteborgs ",
     price: 50,
   },
   {
